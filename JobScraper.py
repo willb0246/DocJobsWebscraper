@@ -39,12 +39,10 @@ for i in links:
         CoName = list(Details[0])
         Location = list(Details[1])
         Contact = valuables.find('a', class_="employer-questions")
-        # categories = soup.find("dt", text="Categories")
         if Contact:
             Category = Contact['href']
         else:
             Category = []
-        # Email = Category['href']
 
         print(Title.text)
         print(CoName)
@@ -55,16 +53,3 @@ for i in links:
 
 sys.stdout.close()
 
-#create dictionary with the hrefs pulled
-
-'''
-for job_link in job_links:
-    mike = job_link['href']
-    links["https://www.docjobs.com/jobs/list/" + str(mike)]
-
-print(links)
-''
-d = {}
-for x in range(1, 10):
-    d["string{0}".format(x)] = "Hello"
-'''
